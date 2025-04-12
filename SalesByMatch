@@ -1,0 +1,22 @@
+Advanced Problems: Sales by Match
+
+function sockMerchant(n, ar) {
+    // Write your code here
+    const colorMap = {};
+    let pairs = 0;
+
+    for (let color of ar) {
+        colorMap[color] = (colorMap[color] || 0) + 1;
+    }
+
+    for (let color in colorMap) {
+        pairs += Math.floor(colorMap[color] / 2);
+    }
+
+    return pairs;
+}
+
+// Example usage
+const n = 7;
+const ar = [1, 2, 1, 2, 1, 3, 2];
+console.log(sockMerchant(n, ar)); // Output: 2

@@ -1,0 +1,21 @@
+Advanced Problems: Bill Division
+
+function bonAppetit(bill, k, b) {
+    // Step 1: Calculate the total cost excluding the item Anna didn't eat
+    let total = 0;
+    for (let i = 0; i < bill.length; i++) {
+        if (i !== k) {
+            total += bill[i];
+        }
+    }
+
+    // Step 2: Calculate Anna's fair share
+    let fairShare = total / 2;
+
+    // Step 3: Compare with what she paid
+    if (b === fairShare) {
+        console.log("Bon Appetit");
+    } else {
+        console.log(b - fairShare);
+    }
+}

@@ -1,0 +1,11 @@
+Advanced problems: Number Line Jumps
+
+function kangaroo(x1, v1, x2, v2) {
+    if (v1 === v2) {
+        return x1 === x2 ? "YES" : "NO";
+    }
+
+    let y = (x2 - x1) / (v1 - v2);
+
+    return (y >= 0 && Number.isInteger(y)) ? "YES" : "NO";
+}
